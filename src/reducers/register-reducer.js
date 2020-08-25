@@ -1,4 +1,4 @@
-export default (state = [{ email: "vishesh@company.com", password: "company" }], action) => {
+export default (state = [{ email: "vishesh@swaOwl.com", password: "smaOwl" }], action) => {
   switch (action.type) {
     case "CREATE_LOGIN":
       return [...state, action.payload.event];

@@ -36,35 +36,35 @@ class SignUp extends React.Component {
   };
 
   render() {
-    const customStyles= {
+    const customStyles = {
       backgroundStyle: {
-        "display":"flex",
-        "alignItems":"center",
-        "justifyContent":"center",
-        "height":"100vh", 
-        "background":"url(https://motionarray.imgix.net/preview-141192-Mi0B7jCQQ8-high_0001.jpg)",
-        "backgroundSize":"cover"
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "height": "100vh",
+        "background": "url(https://motionarray.imgix.net/preview-141192-Mi0B7jCQQ8-high_0001.jpg)",
+        "backgroundSize": "cover"
       },
       logo: {
-        filter: "invert(70%)drop-shadow(5px 10px 3px #53515142)"
+        filter: "drop-shadow(5px 10px 3px #53515142)",
+        height: "60px"
       }
     }
-    
+
     return (
       <div style={customStyles.backgroundStyle}>
         <div style={{ width: '50vw' }}>
-          <div className="text-center">
-            <div>
-              <img style={customStyles.logo} alt="full throttle" src="https://fullthrottlelabs.com/img/logo/logo-2.png" />
+          <div className='container card mt-5 p-4' style={{ "borderRadius": "10px", "background": "rgb(255 255 255 / 16%)", "border": "2px #a2d6f396 solid" }}>
+            <div className="text-center">
+              <div>
+                <img style={customStyles.logo} alt="smaOwl" src="https://assets.website-files.com/5de5d00ba6a896fd7382e3e2/5e6b808ff633b217105451f9_5e54cd1e9261fb046b86aeb6_Group_2024_402x_ebc0c6cb38ca5e8101edc18471253066.png" />
+              </div>
             </div>
-          </div>
-          <div className='container card mt-5 p-4' style={{ borderRadius: '10px'}}>
             <h2>Please Sign Up</h2>
-            <span>Sign up with your email and password</span>
             <div className="mb-2">
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                  <Label className="mt-2 mb-2" color='violet' ribbon>
+                  <Label className="mt-2 mb-2" color='yellow' ribbon>
                     Email Address
                   </Label>
                   <input type="email" className="form-control" name="email" onChange={this.handleChange} placeholder="Enter email" autoComplete="off" />
@@ -73,13 +73,13 @@ class SignUp extends React.Component {
                   {this.state.error}
                 </div>
                 <div className="form-group">
-                  <Label className="mb-2" color='violet' ribbon>
+                  <Label className="mb-2" color='yellow' ribbon>
                     Password
                   </Label>
                   <input type="password" className="form-control" name="password" onChange={this.handleChange} placeholder="Password" />
                 </div>
-                <Button type="submit" color='violet' className="mb-2">Submit</Button>
-                <Link to="/"><button className="btn btn-danger mb-2 ml-2">Cancel</button></Link>
+                <Button type="submit" color='yellow' className="mb-2">Submit</Button>
+                <Link to="/"><Button className="mb-2 ml-2">Cancel</Button></Link>
               </form>
             </div>
           </div>

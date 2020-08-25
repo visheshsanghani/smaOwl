@@ -1,3 +1,12 @@
 .shared-errorColor{
     color: red;
 }
+.google-login-button {
+    box-shadow: 0 0 0 1px #767676 inset !important;
+    border-radius: .28571429rem !important;
+    /* background: inherit !important; */
+}
+button.google-login-button > div {
+    background: none !important;
+    border-radius: .28571429rem !important;
+}
